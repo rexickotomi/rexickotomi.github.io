@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <title>rexickotomi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="rexickotomi">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="rexickotomi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="rexickotomi">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="rexickotomi" rel="home">rexickotomi</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">前天看到了小兔，昨天是小鹿，今天是你</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main">
+  
+    <article id="post-html语义化" class="post-html语义化 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/07/08/html语义化/">HTML语义化</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/html语义化/" data-id="cj5fb9g0l0000u4cpqq26zluv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="语义化简介"><a href="#语义化简介" class="headerlink" title="语义化简介"></a>语义化简介</h3><p>  &emsp;&emsp;HTML的精髓就在于标签的语义。在HTML中，大部分标签都有它自身的语义，例如p标签，表示的是“paragraph”，标记的是一个段落；h1标签，表示“header1”，标记的是一个最高级标题……而div和span是无语义的标签，我们应该尽量少用。<br>  &emsp;&emsp;学习HTML的重点不在于掌握了多少标签，而在于掌握标签的语义以及如何编写一个语义结构良好的页面。<br>  &emsp;&emsp;结构化HTML文档主要体现在对HTML标签正确、合理地使用中。选择HTML标签时要根据其语义，而不是其样式进行。</p>
+<p>  &emsp;&emsp;编写一个语义结构良好的页面在实际开发中及其重要。主要有两个最大的优点：<br>  &emsp;&emsp;1) 利于开发调试和后期维护<br>  &emsp;&emsp;2) 利于搜索引擎优化</p>
+<h3 id="语义化详解"><a href="#语义化详解" class="headerlink" title="语义化详解"></a>语义化详解</h3><p>  &emsp;&emsp;<strong> 标题语义化（h1~h6） </strong><br>  &emsp;&emsp;&emsp;&emsp;相对于其他语义化标签，h1~h6在搜索引擎优化（即SEO）中占有相当重要的地位。因此，<br>  &emsp;&emsp;&emsp;&emsp;从搜索引擎优化的角度来说，建议：<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;1) 一个页面只能有一个h1标签，虽然W3C没有明确规定。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2) h1~h6之间不能断层，要按照“h1、h2、h3、h4”这样的顺序依次排列下来，不要<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;出现“h1、h3、h4”而漏掉h2的情况<br>  &emsp;&emsp;&emsp;&emsp;另外，不要用h1~h6来定义样式，不要用div来替代h1~h6。</p>
+<p>  &emsp;&emsp;<strong> 图片语义化（img） </strong><br>  &emsp;&emsp;&emsp;&emsp;1) alt属性和title属性<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;img src=&quot;&quot; alt=&quot;图片描述（给搜索引擎看）&quot; title=&quot;图片描述（给用户看）&quot; /&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;当图片无法显示时，页面会显示alt中的文字，当鼠标指针移动到图片上时，会显示<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;title中的内容。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;alt属性在搜索引擎优化中很重要。搜索引擎只会查看HTML代码，通过img标签的alt属<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;性或者页面上下文来判断图片的内容。因此，alt属性是img标签必需属性，一定要添<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;加；title属性是img标签可选属性，可加可不加。<br>  &emsp;&emsp;&emsp;&emsp;2）figure元素和figcaption元素<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在HTML5中，引入了figure和figcaption两个元素来增强图片的语义化。figure元素用<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;于包含图片和图注，figcaption元素用于表示图注文字。建议使用这两个元素来实现<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;“图片+图注”效果：<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;figure&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;img src=&quot;&quot; alt=&quot;&quot; title+&quot;&quot; /&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;figcaption&gt;&lt;/figcaption&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;/figure&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;<br>  &emsp;&emsp;&emsp;&emsp;PS:&emsp;想要在页面显示一张图片，我们有两种方式：一是使用img标签；二是使用背景图片。<br>  &emsp;&emsp;&emsp;&emsp;这两种实现方式最明显的区别在于：使用img标签添加图片,是通过HTML来实现；使用背景<br>  &emsp;&emsp;&emsp;&emsp;图片，是通过CSS来实现。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;对于什么时候使用img标签，什么时候使用背景图片，我们应该根据HTML的语义来判<br>  &emsp;&emsp;&emsp;&emsp;断。如果图片作为HTML的一部分，并且想要被搜索引擎识别，则应该使用img标签，例如<br>  &emsp;&emsp;&emsp;&emsp;常见的各种图片列表。如果图片仅仅是起到修饰作用，并且不想被搜索引擎识别，则应该使<br>  &emsp;&emsp;&emsp;&emsp;用背景图片。</p>
+<p>  &emsp;&emsp;<strong> 表格语义化（table） </strong><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在表格中，我们比较常用的标签是table、tr和td这3个。不过为了加强表格的语义化，<br>  &emsp;&emsp;&emsp;&emsp;W3C还增加了5个标签：th、caption、thead、tbody和tfoot。th表示“表头单元格”；<br>  &emsp;&emsp;&emsp;&emsp;caption表示“表格标题”。thead、tbody和tfoot这3个标签把表格从语义上分为三部分：<br>  &emsp;&emsp;&emsp;&emsp;表头、表身和表脚。有了这几个标签，表格语义更加良好，结构更加清晰。对于thead、<br>  &emsp;&emsp;&emsp;&emsp;tbody和tfoot这3个标签，不一定能够全部都用得上，例如tfoot就很少用，tfoot往往都是用<br>  &emsp;&emsp;&emsp;&emsp;于统计数据。一般情况下，我们都是根据实际需要来使用这3个标签。</p>
+<p>  &emsp;&emsp;<strong> 表单语义化 </strong><br>  &emsp;&emsp;&emsp;&emsp;1) label标签<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;W3C规范定义，label标签用于显示在输入控件旁边的说明性文字。也就是将某个表<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;单元素和某段说明文字关联起来。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;语法：<code>&lt;label for=&quot;&quot;&gt;说明性文字&lt;/label&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;label标签for属性值为所关联的表单元素的id，例如<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;input id=&quot;name&quot; type=&quot;text&quot;&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;则其所关联的label标签应该为<code>&lt;label for=&quot;name&quot;&gt;&lt;/label&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;label标签的for属性有两个作用:<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(1)语义上绑定了label元素和表单元素。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(2)增强了鼠标可用性。也就是说我们点击label中的文本时，其所关联的表单<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;元素也会获得焦点。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;label标签有两种关联方式，例如：<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;input id=&quot;aa&quot; type=&quot;checkbox&quot; /&gt;&lt;label for=&quot;aa&quot;&gt;复选框&lt;/label&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;label for=&quot;aa&quot;&gt;复选框&lt;input id=&quot;aa&quot; type=&quot;checkbox&quot; /&gt;&lt;/label&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;2）fieldset标签和legend标签<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在表单中，我们可以使用fieldset标签来给表单元素进行分组。其中，legend标签<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;用于定义某一组表单的标题。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;使用fieldset和legend标签有两个作用：<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;（1）增强表单的语义。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;（2）可以定义fieldset元素的disabled属性来禁用整个组中的表单元素。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;form action=&quot;&quot; method=&quot;&quot;&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;fieldset&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;legend&gt;分组标题&lt;/legend&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;表单标签<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;…………<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;/fieldset&gt;</code><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>&lt;/form&gt;</code></p>
+<p>  &emsp;&emsp;<strong> 其他语义化 </strong><br>  &emsp;&emsp;&emsp;&emsp;换行符&lt;br/&gt;<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;W3C标准规定,&lt;br/&gt;标签仅仅用于段落中的换行，不能用于其他情况。也就是说，<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;br/&gt;标签只适用于p标签内部的换行，不能用于其他标签。<br>  &emsp;<br>  &emsp;&emsp;&emsp;&emsp;无序列表ul<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在实际开发中，对于列表型的数据，为了实现良好的语义，建议使用无序列表或者<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;有序列表，不建议使用div等来实现。<br>  &emsp;<br>  &emsp;&emsp;&emsp;&emsp;strong标签和em标签<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;strong用于实现加粗文本，em用于实现斜体文本。基于结构和样式分离的原则，标<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;签仅仅是为了实现简单的加粗或者斜体效果，我们一般不会用这两个。实际上，W3C对<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;这两个标签赋予“强调”的语义，在strong或者em标签内部的文本被强调为重要文本。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;并且搜索引擎对这两个标签也赋予一定的权重。如果在一个页面中，为了SEO而想要突<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;出某些关键字，可以使用strong和em这两个标签。一般情况下，我们都是去掉strong<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;和em的默认样式，然后使用CSS重新定义新的样式，但这并不影响着两个标签的语义。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;也就是说，样式只会改变标签的外观，但不会改变标签的语义。<br>  &emsp;<br>  &emsp;&emsp;&emsp;&emsp;del标签和ins标签<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在HTML中，del和ins这两个标签是配合使用的。del表示“delete”，用于定义被<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;删除的文本。ins表示“insert”，用于定义被更新的文本。一般情况下，我们会使用<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;CSS来重新定义del和ins标签的样式。</p>
+<p>  &emsp;&emsp;<strong> 语义化验证 </strong><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;如何判断一个页面是否语义良好呢？一个简单的方法就是：去掉CSS样式，然后看页面<br>  &emsp;&emsp;&emsp;&emsp;是否还具有很好的可读性。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;我们都知道，很多HTML标签都有一定的默认样式，不同的HTML标签可以通过不同的<br>  &emsp;&emsp;&emsp;&emsp;CSS来实现相同的效果。但是“一个语义良好的的页面”跟“一个语义不好的页面”在去除<br>  &emsp;&emsp;&emsp;&emsp;样式之后的表现却是截然不同的。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;想要查看一个页面在“CSS裸奔”下的效果，我们可以使用Firefox浏览器的一款网页调<br>  &emsp;&emsp;&emsp;&emsp;试插件“Web Developer”来测试。安装完Web Developer后，在Web Developer工具栏<br>  &emsp;&emsp;&emsp;&emsp;找到“CSS”→”Disable Styles”→”Disable All Styles”并且选中，就可以查看页面去掉<br>  &emsp;&emsp;&emsp;&emsp;样式后的效果。</p>
+<p>  &emsp;&emsp;<strong> HTML5舍弃的标签 </strong><br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在HTML5中，除了新增标签之外，也有不少标签被舍弃了。为了实现页面的语义化，我<br>  &emsp;&emsp;&emsp;&emsp;们在实际开发中不应该再去使用这些标签。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;对于这些被舍弃的标签，总体可以分为两大类：<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;1)仅仅为了定义样式，没有任何语义，因此被舍弃，如font、s、u等。<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2)很少使用或者已经被新标签代替，因此被舍弃。如acronym被abbr代替等。<br>  &emsp;&emsp;&emsp;&emsp;参考博文: <a href="http://www.cnblogs.com/wn1341/p/6665437.html" target="_blank" rel="external">html5新增标签与删除标签</a><br>  &emsp;<br>  &emsp;&emsp;&emsp;&emsp;对于HTML语义化，我们需要注意以下两点：<br>  &emsp;&emsp;&emsp;&emsp;1）我们应该果断舍弃那些仅仅为了定义样式而存在的HTML标签。如果仅仅是为了改变样<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;式，我们应该使用CSS来实现，不要使用HTML标签。<br>  &emsp;&emsp;&emsp;&emsp;2）在不同的页面部分，我们优先使用正确的语义化标签。如果没有语义化标签可用，才去考<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;虑div和span等无语义标签。</p>
+<h3 id="lt-div-gt-和-lt-span-gt"><a href="#lt-div-gt-和-lt-span-gt" class="headerlink" title="&lt;div&gt;和&lt;span&gt;"></a>&lt;div&gt;和&lt;span&gt;</h3><p>&emsp;&emsp;div和span没有任何语义，正是因为没有语义，这两个标签一般都是配合CSS来定义元素样式。<br>&emsp;&emsp;div和span区别如下：<br>&emsp;&emsp;1) div是块元素，可以包含任何块元素和行内元素，不会与其他元素位于同一行；span是行内元素，可以与其他行内元素位于同一行。<br>&emsp;&emsp;2) div常用于页面中较大块的结构划分，然后配合CSS来操作；span一般用来包含文字等，它没有结构的意义，纯粹是应用样式。当其他行内元素都不适合的时候，可以用span来配合CSS操作。</p>
+<h2 id="class和id"><a href="#class和id" class="headerlink" title="class和id"></a>class和id</h2><p>&emsp;&emsp;id和class是HTML元素中两个最基本的公共属性。一般情况下，id和class都用来选择元素，以便进行CSS操作或者JavaScript操作。<br>&emsp;&emsp;id属性具有唯一性，也就是说在一个页面中不能出现相同的id。W3C建议，对于页面关键的结构或者大结构，我们才使用id。所谓的关键结构，指的是诸如LOGO、导航、主体内容、底部信息栏等结构。对于一些小地方，还是建议使用class属性。<br>&emsp;&emsp;搜索引擎识别一个页面结构，是根据标签的语义以及id属性来识别的。因此，id属性不要轻易使用。此外，id的命名也十分关键，特别是对搜索引擎优化而言。<br>&emsp;&emsp;我们可以为同一个页面的相同元素或者不同元素设置相同的class，然后使得相同class的元素具有相同的CSS样式。如果你要为两个或者两个以上元素定义相同的样式，建议使用class属性。因为这样可以减少大量的重复代码。<br>&emsp;&emsp;注意，对于一个元素而言，我们可以定义多个class。一般来说，定义多个class的目的在于，一般用一个class抽取公共样式，然后用另外一个class定义单独样式。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/08/html语义化/">
+    <time datetime="2017-07-08T09:14:08.000Z" class="entry-date">
+        2017-07-08
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-前端基础知识" class="post-前端基础知识 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/07/08/前端基础知识/">前端基础知识</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/前端基础知识/" data-id="cj5fb9g0z0005u4cpflw3wl7b" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p><strong>渲染引擎(浏览器内核)</strong>:<br>&emsp;&emsp;决定了浏览器如何显示网页的内容以及页面的格式信息,是兼容性问题出现的根本原因。<br></p>
+<p> <strong> 我们在浏览器里看到的网页其实是由以下三层信息构成的一个共同体: </strong><br> &emsp;&emsp;结构层<br> &emsp;&emsp;&emsp;&emsp;网页的结构层是由HTML或XHTML之类的标记语言负责创建<br> &emsp;&emsp;表示层<br> &emsp;&emsp;&emsp;&emsp;表示层由CSS负责完成，css描述页面内容应该如何呈现<br> &emsp;&emsp;行为层<br> &emsp;&emsp;&emsp;&emsp;行为层负责内容应该如何响应事件这一问题，这是JavaScript语言<br> &emsp;&emsp;&emsp;&emsp;和DOM主宰的领域。<br><br> &emsp;&emsp;&emsp;&emsp;虽然在这三种技术之间存在着一些潜在的重叠区域，但是，我们应该尽量让这三种技术各司<br> &emsp;&emsp;其职，实现分离，远离如用dom脚本编程控制css样式这种”不务正业”的做法。<br> &emsp;&emsp;&emsp;&emsp;此外，HTML关注的是结构（语义），css关注的是样式，结构和样式应该分离。应该把所有<br> &emsp;&emsp;的格式化和设计相关的实现放在CSS文件中，让HTML只用来表示文档结构，不用于页面样式的<br> &emsp;&emsp;设计中。</p>
+<p><strong> HTML、XHTML和HTML5 </strong><br>&emsp;&emsp;HTML（超文本标记语言）指的是HTML 4.01，XHTML（扩展的超文本标记语言）是HTML的过渡版——XML风格的HTML 4.01，HTML 5是下一代的HTML——HTML 4.01的升级版。<br>&emsp;&emsp;HTML5不再是单纯意义上的标签了，它已经远远超越了标签的范畴。HTML5除了新增部分标签之外，还增加了一组技术，包括canvas、SVG、WebSocket、本地存储等。这些新增的技术都是使用JavaScript来操作。也就是说，HTML5使得HTML从一门“标记语言”转变为一门“编程语言”。<br>&emsp;<br>&emsp;&emsp;XHTML相对于HTML来说，在语法上更加严格。XHTML和HTML主要区别如下：<br>&emsp;&emsp;1）XHTML标签必须闭合。<br>&emsp;&emsp;2）XHTML标签以及属性必须小写。<br>&emsp;&emsp;3）XHTML标签属性必须用引号。<br>&emsp;&emsp;4）XHTML标签用id属性代替name属性。<br>&emsp;<br>&emsp;&emsp;单纯从新增的标签上来看，HTML 5有以下几个特点：<br>&emsp;&emsp;1）文档类型说明——&lt;!DOCTYPE&gt;，被极大地简化了。<br>&emsp;&emsp;2）标签不再区分大小写。<br>&emsp;&emsp;3）允许属性值不加引号。<br>&emsp;&emsp;4）允许部分属性的属性值省略，如<code>&lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;</code>可省略为<br>&emsp;&emsp;&emsp;<code>&lt;input type=&quot;checkbox&quot; checked /&gt;</code></p>
+<p><strong> 浏览器标题栏小图标 </strong><br>&emsp;&emsp;想要在浏览器标题栏添加小图标，只需在head标签添加一个如下的link标签即可：<br>&emsp;&emsp;<code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;*.ico&quot; /&gt;</code><br>&emsp;&emsp;注：rel和type这两个属性的取值是固定形式，而href属性取值为小图标的地址，这个地址是根据小图标在站点文件夹路径而定的，跟图片引用路径类似。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/08/前端基础知识/">
+    <time datetime="2017-07-08T09:13:44.000Z" class="entry-date">
+        2017-07-08
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-CSS属性简写总结" class="post-CSS属性简写总结 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/07/07/CSS属性简写总结/">CSS属性简写总结</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/CSS属性简写总结/" data-id="cj5fb9g0r0001u4cpkar8dp2a" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>简写css属性时，如果你没有设定某些必要的属性值，这些属性值会使用缺省值，从而导致与预料的显示效果不同，这点要谨记。<br>此外，简写CSS属性时一定按照规定的顺序书写</p>
+<p>如在一个html文件中，要注意css的引用顺序，如在引用的前一个css中，为body设置了background-color值，并且在引用的后一个css中也为body设置background的其他属性时，<br>如果使用了简写属性，就会导致起初的background-color值失效，而使用background-color的缺省值。</p>
+<p>反之，如果引用的顺序相反，则不会发生这种情况，background-color值会覆盖缺省值。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/07/CSS属性简写总结/">
+    <time datetime="2017-07-07T15:18:06.000Z" class="entry-date">
+        2017-07-07
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-hello-Hexo" class="post-hello-Hexo post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/07/06/hello-Hexo/">Hello Hexo</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/06/hello-Hexo/" data-id="cj5fb9g0x0004u4cp38zuhq5e" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/06/hello-Hexo/">
+    <time datetime="2017-07-06T15:18:06.000Z" class="entry-date">
+        2017-07-06
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+  
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-content">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/08/html语义化/">HTML语义化</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/前端基础知识/">前端基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/CSS属性简写总结/">CSS属性简写总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/06/hello-Hexo/">Hello Hexo</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//cn.bing.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=734141330&auto=0&height=430"></iframe>
+    </div>
+  </aside>
+
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 rexickotomi
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
