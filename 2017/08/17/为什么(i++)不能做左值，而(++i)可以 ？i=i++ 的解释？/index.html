@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 前端 | rexickotomi</title>
+  <title>为什么(i++)不能做左值，而(++i)可以？i=i++的解释？ | rexickotomi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="rexickotomi">
-<meta property="og:url" content="http://yoursite.com/tags/前端/index.html">
+  <meta name="description" content="为什么(i++)不能做左值，而(++i)可以？1234567891011121314// 前缀形式：int&amp;amp; int::operator++() //这里返回的是一个引用形式，就是说函数返回值也可以作为一个左值使用&amp;#123;//函数本身无参，意味着是在自身空间内增加1的  *this += 1;  // 增加  return *this;  // 取回值&amp;#125;//后缀形式:cons">
+<meta name="keywords" content="编程语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么(i++)不能做左值，而(++i)可以？i=i++的解释？">
+<meta property="og:url" content="http://yoursite.com/2017/08/17/为什么(i++)不能做左值，而(++i)可以 ？i=i++ 的解释？/index.html">
 <meta property="og:site_name" content="rexickotomi">
+<meta property="og:description" content="为什么(i++)不能做左值，而(++i)可以？1234567891011121314// 前缀形式：int&amp;amp; int::operator++() //这里返回的是一个引用形式，就是说函数返回值也可以作为一个左值使用&amp;#123;//函数本身无参，意味着是在自身空间内增加1的  *this += 1;  // 增加  return *this;  // 取回值&amp;#125;//后缀形式:cons">
+<meta property="og:updated_time" content="2017-08-18T13:47:26.800Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="rexickotomi">
+<meta name="twitter:title" content="为什么(i++)不能做左值，而(++i)可以？i=i++的解释？">
+<meta name="twitter:description" content="为什么(i++)不能做左值，而(++i)可以？1234567891011121314// 前缀形式：int&amp;amp; int::operator++() //这里返回的是一个引用形式，就是说函数返回值也可以作为一个左值使用&amp;#123;//函数本身无参，意味着是在自身空间内增加1的  *this += 1;  // 增加  return *this;  // 取回值&amp;#125;//后缀形式:cons">
   
     <link rel="alternative" href="/atom.xml" title="rexickotomi" type="application/atom+xml">
   
@@ -141,128 +146,159 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-为什么(i++)不能做左值，而(++i)可以 ？i=i++ 的解释？" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/08/html语义化/" class="archive-article-date">
-  	<time datetime="2017-07-08T09:14:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/08/html语义化/">HTML语义化</a>
+    <h1 class="article-title" itemprop="name">
+      为什么(i++)不能做左值，而(++i)可以？i=i++的解释？
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/08/17/为什么(i++)不能做左值，而(++i)可以 ？i=i++ 的解释？/" class="archive-article-date">
+  	<time datetime="2017-08-17T13:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="为什么-i-不能做左值，而-i-可以？"><a href="#为什么-i-不能做左值，而-i-可以？" class="headerlink" title="为什么(i++)不能做左值，而(++i)可以？"></a>为什么(i++)不能做左值，而(++i)可以？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">// 前缀形式：</div><div class="line">int&amp; int::operator++() //这里返回的是一个引用形式，就是说函数返回值也可以作为一个左值使用</div><div class="line">&#123;//函数本身无参，意味着是在自身空间内增加1的</div><div class="line">  *this += 1;  // 增加</div><div class="line">  return *this;  // 取回值</div><div class="line">&#125;</div><div class="line"></div><div class="line">//后缀形式:</div><div class="line">const int int::operator++(int) //函数返回值是一个非左值型的，与前缀形式的差别所在。</div><div class="line">&#123;//函数带参，说明有另外的空间开辟</div><div class="line">  int oldValue = *this;  // 取回值</div><div class="line">  ++(*this);  // 增加</div><div class="line">  return oldValue;  // 返回被取回的值</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如上所示，i++ 最后返回的是一个临时变量的值，而这个值只能是右值。</p>
+<h3 id="i-i-的解释？"><a href="#i-i-的解释？" class="headerlink" title="i=i++的解释？"></a>i=i++的解释？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">int count =0;</div><div class="line">for(int i=0;i&lt;10;i++)&#123;</div><div class="line">    count=count++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个程序输出的count等于几？由i++的函数原型可知，首先把count的值（注意是值，不是引用）拷贝到一个临时变量区，然后对count变量加1，最后返回临时变量区的值。如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//先保存初始值</div><div class="line">int temp =count;</div><div class="line">//做自增操作</div><div class="line">countcount = count+1;</div><div class="line">//返回原始值</div><div class="line">return temp;</div></pre></td></tr></table></figure></p>
+<p>于是第一次循环后count的值还是0，其他9次的循环也是一样的，最终你会发现count的值始终没有改变，仍然保持着最初的状态。该问题在不同的语言环境有不同的实现：C++中“count=count++”与“count++”是等效的，而在PHP中则保持着与Java相同的处理方式，每种语言对自增的实现方式各不同。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程语言</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/前端/" class="article-tag-list-link color3">前端</a>
+        			<a href="/categories/编程语言/" class="article-tag-list-link color5">编程语言</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/17/为什么(i++)不能做左值，而(++i)可以 ？i=i++ 的解释？/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/07/CSS属性简写总结/" class="archive-article-date">
-  	<time datetime="2017-07-07T15:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/16/时间复杂度和空间复杂度/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">时间复杂度和空间复杂度</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/07/CSS属性简写总结/">CSS属性简写总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端/" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -286,9 +322,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
