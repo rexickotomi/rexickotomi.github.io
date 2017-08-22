@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/17/为什么(i++)不能做左值，而(++i)可以 ？i=i++ 的解释？/index.html">
 <meta property="og:site_name" content="rexickotomi">
 <meta property="og:description" content="为什么(i++)不能做左值，而(++i)可以？1234567891011121314// 前缀形式：int&amp;amp; int::operator++() //这里返回的是一个引用形式，就是说函数返回值也可以作为一个左值使用&amp;#123;//函数本身无参，意味着是在自身空间内增加1的  *this += 1;  // 增加  return *this;  // 取回值&amp;#125;//后缀形式:cons">
-<meta property="og:updated_time" content="2017-08-18T13:47:26.800Z">
+<meta property="og:updated_time" content="2017-08-22T00:57:14.645Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么(i++)不能做左值，而(++i)可以？i=i++的解释？">
 <meta name="twitter:description" content="为什么(i++)不能做左值，而(++i)可以？1234567891011121314// 前缀形式：int&amp;amp; int::operator++() //这里返回的是一个引用形式，就是说函数返回值也可以作为一个左值使用&amp;#123;//函数本身无参，意味着是在自身空间内增加1的  *this += 1;  // 增加  return *this;  // 取回值&amp;#125;//后缀形式:cons">
@@ -169,7 +169,7 @@
         <h3 id="为什么-i-不能做左值，而-i-可以？"><a href="#为什么-i-不能做左值，而-i-可以？" class="headerlink" title="为什么(i++)不能做左值，而(++i)可以？"></a>为什么(i++)不能做左值，而(++i)可以？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">// 前缀形式：</div><div class="line">int&amp; int::operator++() //这里返回的是一个引用形式，就是说函数返回值也可以作为一个左值使用</div><div class="line">&#123;//函数本身无参，意味着是在自身空间内增加1的</div><div class="line">  *this += 1;  // 增加</div><div class="line">  return *this;  // 取回值</div><div class="line">&#125;</div><div class="line"></div><div class="line">//后缀形式:</div><div class="line">const int int::operator++(int) //函数返回值是一个非左值型的，与前缀形式的差别所在。</div><div class="line">&#123;//函数带参，说明有另外的空间开辟</div><div class="line">  int oldValue = *this;  // 取回值</div><div class="line">  ++(*this);  // 增加</div><div class="line">  return oldValue;  // 返回被取回的值</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如上所示，i++ 最后返回的是一个临时变量的值，而这个值只能是右值。</p>
 <h3 id="i-i-的解释？"><a href="#i-i-的解释？" class="headerlink" title="i=i++的解释？"></a>i=i++的解释？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">int count =0;</div><div class="line">for(int i=0;i&lt;10;i++)&#123;</div><div class="line">    count=count++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这个程序输出的count等于几？由i++的函数原型可知，首先把count的值（注意是值，不是引用）拷贝到一个临时变量区，然后对count变量加1，最后返回临时变量区的值。如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//先保存初始值</div><div class="line">int temp =count;</div><div class="line">//做自增操作</div><div class="line">countcount = count+1;</div><div class="line">//返回原始值</div><div class="line">return temp;</div></pre></td></tr></table></figure></p>
+<p>这个程序输出的count等于几？在java中，由i++的函数原型可知，首先把count的值（注意是值，不是引用）拷贝到一个临时变量区，然后对count变量加1，最后返回临时变量区的值。如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//先保存初始值</div><div class="line">int temp =count;</div><div class="line">//做自增操作</div><div class="line">count = count+1;</div><div class="line">//返回原始值</div><div class="line">return temp;</div></pre></td></tr></table></figure></p>
 <p>于是第一次循环后count的值还是0，其他9次的循环也是一样的，最终你会发现count的值始终没有改变，仍然保持着最初的状态。该问题在不同的语言环境有不同的实现：C++中“count=count++”与“count++”是等效的，而在PHP中则保持着与Java相同的处理方式，每种语言对自增的实现方式各不同。</p>
 
       
@@ -266,8 +266,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2017/08/16/时间复杂度和空间复杂度/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">时间复杂度和空间复杂度</div>
+    <a href="/2017/08/16/CPP笔记三/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C Primer Plus笔记三</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -384,7 +384,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -392,7 +396,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
